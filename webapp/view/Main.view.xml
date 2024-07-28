@@ -1,0 +1,75 @@
+<mvc:View controllerName="com.demoapp.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>salesordertitle}">
+        <content>
+<Label text = "{i18n>salesorder}"></Label>
+<Input value="{inputmodel>/vbeln}"/>
+
+<Label text = "{i18n>Salesorganisation}"></Label>
+<Input value="{inputmodel>/vkorg}"/>
+
+
+<Label text = "{i18n>Distributionchannel}"></Label>
+<Input value="{inputmodel>/vtweg}"/>
+
+
+<Label text = "{i18n>Division}"></Label>
+<Input value="{inputmodel>/spart}"/>
+
+<Button text = "{i18n>Submit}" press="submit" />
+<Button text = "{i18n>edit}" press="edit"/>
+<Button text = "{i18n>delete}" press="delete"/>
+
+<Table id = "table" items ="{Tablemodel>/}" mode="SingleSelectLeft" selectionChange="onTableselect">
+
+<columns>
+
+<Column>
+
+<Text text = "{i18n>salesorder}"/>
+
+</Column>
+
+
+<Column>
+
+<Text text = "{i18n>Salesorganisation}"/>
+
+</Column>
+
+
+<Column>
+
+<Text text = "{i18n>Distributionchannel}"/>
+
+</Column>
+
+
+<Column>
+
+<Text text = "{i18n>Division}"/>
+
+</Column>
+
+</columns>
+
+
+<ColumnListItem >
+
+<Text text = "{Tablemodel>vbeln}"/>
+<Text text = "{Tablemodel>vkorg}"/>
+<Text text = "{Tablemodel>vtweg}"/>
+
+<Text text="{
+  path: 'Tablemodel>spart',
+  formatter: '.formatter.classText'
+}"/>
+
+</ColumnListItem>
+
+</Table>
+
+        </content>
+    </Page>
+</mvc:View>

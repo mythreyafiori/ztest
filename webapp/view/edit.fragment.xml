@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+>
+	<Dialog
+		id="helloDialog"
+		title="Edit Sales order">
+
+<Label text = "{i18n>salesorder}"></Label>
+<Input value="{editmodel>/vbeln}"/>
+
+<Label text = "{i18n>Salesorganisation}"></Label>
+<Input value="{editmodel>/vkorg}"/>
+
+
+<Label text = "{i18n>Distributionchannel}"></Label>
+<Input value="{editmodel>/vtweg}"/>
+
+
+<Label text = "{i18n>Division}"></Label>
+<Input value="{editmodel>/spart}"/>
+
+
+<Button text = "{i18n>change}" press="change"/>
+
+        </Dialog>
+
+</core:FragmentDefinition>
